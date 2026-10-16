@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "wysslib",
+	"version": "${version}",
+	"name": "Wysss Library",
+	"description": "shared menus for the wysss mods, a settings kit and a texture pack browser. needed to open the menus of the other wysss mods (key INSERT).",
+	"authors": ["wysss"],
+	"contact": {"sources": "https://github.com/realwysss/Wysss-Library"},
+	"license": "All-Rights-Reserved",
+	"icon": "assets/wysslib/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.wysl.Wl"],
+		"modmenu": ["dev.wysl.ModmenuIntgr"]
+	},
+	"mixins": [
+		{
+			"config": "wysslib.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"suggests": {
+		"modmenu": "*"
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"fabric-api": "*",
+		"minecraft": ">=1.21.11 <1.22",
+		"java": ">=21"
+	}
+}
